@@ -1,3 +1,0 @@
-/home/darin/github/MIPT/2_sem_tp/1_task pattern/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/darin/github/MIPT/2_sem_tp/1_task pattern/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/darin/github/MIPT/2_sem_tp/1_task pattern/cmake-build-debug/CMakeFiles/1_task_pattern.dir
