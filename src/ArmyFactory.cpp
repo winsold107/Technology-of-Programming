@@ -7,11 +7,11 @@
 ArmyPtr ArmyFactory::createOrcArmy() {
     ArmyBuilder builder(ArmyType::eOrcArmy);
 
-    builder.buildInfantryCreature();
-    builder.buildArcher();
-    builder.buildWargRider();
-    builder.buildCatapult();
-    builder.buildUrugHai();
+    builder.buildInfantryCreature(100);
+    builder.buildArcher(50);
+    builder.buildWargRider(30);
+    builder.buildCatapult(20);
+    builder.buildUrugHai(1);
 
     return builder.getArmy();
 }
@@ -19,10 +19,10 @@ ArmyPtr ArmyFactory::createOrcArmy() {
 ArmyPtr ArmyFactory::createMankindArmy() {
     ArmyBuilder builder(ArmyType::eMankindArmy);
 
-    builder.buildInfantryCreature();
-    builder.buildArcher();
-    builder.buildMechanisme();
-    builder.buildManKing();
+    builder.buildInfantryCreature(100);
+    builder.buildArcher(50);
+    builder.buildMechanisme(50);
+    builder.buildManKing(1);
 
     return builder.getArmy();
 }
@@ -30,9 +30,9 @@ ArmyPtr ArmyFactory::createMankindArmy() {
 ArmyPtr ArmyFactory::createGoblinArmy() {
     ArmyBuilder builder(ArmyType::eGoblinArmy);
 
-    builder.buildInfantryCreature();
-    builder.buildArcher();
-    builder.buildMechanisme();
+    builder.buildInfantryCreature(100);
+    builder.buildArcher(50);
+    builder.buildMechanisme(50);
 
     return builder.getArmy();
 }
@@ -40,7 +40,7 @@ ArmyPtr ArmyFactory::createGoblinArmy() {
 ArmyPtr ArmyFactory::createGiantWorm() {
     ArmyBuilder builder(ArmyType::eGiantWormArmy);
 
-    builder.buildGiantWorm();
+    builder.buildGiantWorm(20);
 
     return builder.getArmy();
 }
@@ -48,7 +48,7 @@ ArmyPtr ArmyFactory::createGiantWorm() {
 ArmyPtr ArmyFactory::createNazgul() {
     ArmyBuilder builder(ArmyType::eNazgulArmy);
 
-    builder.buildNazgul();
+    builder.buildNazgul(9);
 
     return builder.getArmy();
 }
@@ -56,7 +56,7 @@ ArmyPtr ArmyFactory::createNazgul() {
 ArmyPtr ArmyFactory::createKrebain() {
     ArmyBuilder builder(ArmyType::eKrebainArmy);
 
-    builder.buildKrebain();
+    builder.buildKrebain(100);
 
     return builder.getArmy();
 }
@@ -64,8 +64,8 @@ ArmyPtr ArmyFactory::createKrebain() {
 ArmyPtr ArmyFactory::createElfArmy() {
     ArmyBuilder builder(ArmyType::eElfArmy);
 
-    builder.buildInfantryCreature();
-    builder.buildArcher();
+    builder.buildInfantryCreature(100);
+    builder.buildArcher(100);
 
     return builder.getArmy();
 }
@@ -73,24 +73,17 @@ ArmyPtr ArmyFactory::createElfArmy() {
 ArmyPtr ArmyFactory::createDwarfArmy() {
     ArmyBuilder builder(ArmyType::eDwarfArmy);
 
-    builder.buildInfantryCreature();
-    builder.buildArcher();
+    builder.buildInfantryCreature(100);
+    builder.buildArcher(50);
 
     return builder.getArmy();
 }
 
-ArmyPtr ArmyFactory::createEnth() {
-    ArmyBuilder builder(ArmyType::eEnthArmy);
-
-    builder.buildEnth();
-
-    return builder.getArmy();
-}
 
 ArmyPtr ArmyFactory::createEagle() {
     ArmyBuilder builder(ArmyType::eEagle);
 
-    builder.buildEagle();
+    builder.buildEagle(100);
 
     return builder.getArmy();
 }

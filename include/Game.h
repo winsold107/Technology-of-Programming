@@ -14,7 +14,7 @@ public:
 
     void start();
     void initGame();
-    void run();
+    int run();
     void showWelcome() const;
 
 private:
@@ -22,6 +22,7 @@ private:
     void _showUserArmies(UserPtr usr);
     void _requireSide();
     void _createArmiesForUsers();
+    void _turnResult(int wh, int dk, int& wink, int& dinc);
 
     bool _finished = false;
     UserPtr _user1, _user2;

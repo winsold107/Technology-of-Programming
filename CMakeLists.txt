@@ -1,7 +1,9 @@
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.6)
 project(The_Lord_Of_the_Rings)
 
 set(CMAKE_CXX_STANDARD 17)
+
+include_directories(${PROJECT_SOURCE_DIR}/include)
 
 set(INCLUDE
         include/Game.h

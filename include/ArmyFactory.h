@@ -18,7 +18,6 @@ public:
     static ArmyPtr createNazgul();
     static ArmyPtr createKrebain();
     static ArmyPtr createElfArmy();
-    static ArmyPtr createEnth();
     static ArmyPtr createDwarfArmy();
     static ArmyPtr createEagle();
     static ArmyPtr createDeadSoul();

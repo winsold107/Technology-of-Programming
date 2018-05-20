@@ -4,10 +4,30 @@
 
 #include "../include/ArmyUnit.h"
 
+UnitTypeToStringMap UnitTypesStrings = {
+        { UnitType::eGiantWorm, "Giant worm" },
+        { UnitType::eNazgul, "Nazgul" },
+        { UnitType::eKrebain, "Krebain" },
+        { UnitType::eManKing, "ManKing" },
+        { UnitType::eMechanisme, "Mechanisme" },
+        { UnitType::eEagle, "Eagle" },
+        { UnitType::eDeadSoul, "Deal soul" },
+        { UnitType::eUrugHai, "Urug hai" },
+        { UnitType::eInfantryCreature, "Infantry creature" },
+        { UnitType::eArcher, "Archer" },
+        { UnitType::eWargRider, "Warg rider" },
+        { UnitType::eCatapult, "Catapult" },
+        { UnitType::eLastArmyUnitType, "Undefined" }
+};
+
 ArmyUnit::ArmyUnit(UnitType type) : _type(type) {}
 
 UnitType ArmyUnit::getType() {
     return _type;
+}
+
+std::string ArmyUnit::name() const {
+    return UnitTypesStrings[_type];
 }
 
 void InfantryCreature::info() {
@@ -46,10 +66,6 @@ void Krebain::info() {
     cout << "Krebain" << endl;
 }
 
-void Enth::info() {
-    cout << "Enth" << endl;
-}
-
 void Eagle::info() {
     cout << "Eagle" << endl;
 }
@@ -62,28 +78,58 @@ void ManKing::info() {
     cout << "The King of People" << endl;
 }
 
-InfantryCreature::InfantryCreature() : ArmyUnit(UnitType::eInfantryCreature) {}
+InfantryCreature::InfantryCreature() : ArmyUnit(UnitType::eInfantryCreature) {
+    _health = INFANTRY_INITIAL_HEALTH;
+    _strength = power;
+}
 
-Archer::Archer() : ArmyUnit(UnitType::eArcher) {}
+Archer::Archer() : ArmyUnit(UnitType::eArcher) {
+    _health = ARCHER_INITIAL_HEALTH;
+    _strength = arrowNumber;
+}
 
-WargRider::WargRider() : ArmyUnit(UnitType::eWargRider) {}
+WargRider::WargRider() : ArmyUnit(UnitType::eWargRider) {
+    _health = WARGRIDER_INITIAL_HEALTH;
+    _strength = power;
+}
 
-Enth::Enth() : ArmyUnit(UnitType::eEnth) {}
+Eagle::Eagle() : ArmyUnit(UnitType::eEagle) {
+    _strength = harm;
+}
 
-Eagle::Eagle() : ArmyUnit(UnitType::eEagle) {}
+DeadSoul::DeadSoul() : ArmyUnit(UnitType::eDeadSoul) {
+    _health = DEAD_SOUL_INITIAL_HEALTH;
+    _strength = power;
+}
 
-DeadSoul::DeadSoul() : ArmyUnit(UnitType::eDeadSoul) {}
+ManKing::ManKing() : ArmyUnit(UnitType::eManKing) {
+    _health = MAN_KING_INITIAL_HEALTH;
+    _strength = power;
+}
 
-ManKing::ManKing() : ArmyUnit(UnitType::eManKing) {}
+Krebain::Krebain() : ArmyUnit(UnitType::eKrebain) {
+    _strength = harm;
+}
 
-Krebain::Krebain() : ArmyUnit(UnitType::eKrebain) {}
+Nazgul::Nazgul() : ArmyUnit(UnitType::eNazgul) {
+}
 
-Nazgul::Nazgul() : ArmyUnit(UnitType::eNazgul) {}
+GiantWorm::GiantWorm() : ArmyUnit(UnitType::eGiantWorm) {
+    _health = GIANT_WORM_INITIAL_HEALTH;
+    _strength = power;
+}
 
-GiantWorm::GiantWorm() : ArmyUnit(UnitType::eGiantWorm) {}
+Catapult::Catapult() : ArmyUnit(UnitType::eCatapult) {
+    _health = CATAPULT_INITIAL_HEALTH;
+    _strength = shot;
+}
 
-Catapult::Catapult() : ArmyUnit(UnitType::eCatapult) {}
+Mechanisme::Mechanisme() : ArmyUnit(UnitType::eMechanisme) {
+    _health = MECHANISME_INITIAL_HEALTH;
+    _strength = power;
+}
 
-Mechanisme::Mechanisme() : ArmyUnit(UnitType::eMechanisme) {}
-
-UrugHai::UrugHai() : ArmyUnit(UnitType::eUrugHai) {}
+UrugHai::UrugHai() : ArmyUnit(UnitType::eUrugHai) {
+    _health = URUGHAI_INITIAL_HEALTH;
+    _strength = power;
+}

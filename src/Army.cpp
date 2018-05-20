@@ -13,12 +13,21 @@ const std::vector<ArmyUnitPtr>& Army::getUnits() const {
     return _units;
 }
 
-std::string Army::getInfo() const {
-    return ArmiesInfo[_type];
+Army::Army(ArmyType type) : _type(type) {
+//    vector<ArmyUnitPtr> un = getUnits();
+//    for (int i = 0; i < un.size(); i++){
+//
+//    }
 }
-
-Army::Army(ArmyType type) : _type(type) {}
 
 ArmyType Army::getType() const {
     return _type;
+}
+
+ArmyType Army::getAmount() const{
+    return _amount;
+}
+
+std::string Army::getInfo() const {
+    return ArmiesInfo[getType()];
 }

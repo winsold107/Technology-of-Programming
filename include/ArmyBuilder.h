@@ -14,20 +14,19 @@ protected:
     ArmyPtr p;
 public:
     explicit ArmyBuilder(ArmyType type);
-    virtual void buildInfantryCreature();
+    virtual void buildInfantryCreature(int count = 100);
 
-    virtual void buildArcher();
-    virtual void buildWargRider();
-    virtual void buildCatapult();
-    virtual void buildUrugHai();
-    virtual void buildEnth();
-    virtual void buildEagle();
-    virtual void buildGiantWorm();
-    virtual void buildKrebain();
-    virtual void buildDeadSoul();
-    virtual void buildNazgul();
-    virtual void buildMechanisme();
-    virtual void buildManKing();
+    virtual void buildArcher(int count = 50);
+    virtual void buildWargRider(int count = 30);
+    virtual void buildCatapult(int count = 20);
+    virtual void buildUrugHai(int count = 10);
+    virtual void buildEagle(int count = 200);
+    virtual void buildGiantWorm(int count = 10);
+    virtual void buildKrebain(int count = 1);
+    virtual void buildDeadSoul(int count = 100);
+    virtual void buildNazgul(int count = 9);
+    virtual void buildMechanisme(int count = 20);
+    virtual void buildManKing(int count = 1);
 
     virtual ArmyPtr getArmy() { return p; }
 
